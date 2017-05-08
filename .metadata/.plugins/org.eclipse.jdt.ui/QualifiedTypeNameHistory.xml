@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.rpc.IsSerializable"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.cellview.client.CellTable"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.cellview.client.TextColumn"/>
+<fullyQualifiedTypeName name="com.google.gwt.view.client.ListDataProvider"/>
+<fullyQualifiedTypeName name="com.google.gwt.cell.client.ButtonCell"/>
+<fullyQualifiedTypeName name="com.google.gwt.cell.client.FieldUpdater"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.datepicker.client.DatePicker"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="com.ibm.icu.util.Calendar"/>
+</qualifiedTypeNameHistroy>
