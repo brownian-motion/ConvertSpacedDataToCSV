@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="cut3d 3d indexing format to csv:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/cut3d_3d_indexing_format_to_csv_jar</output-path>
-    <root id="archive" name="cut3d 3d indexing format to csv.jar">
+    <root id="archive" name="spacedToCSV.jar">
       <element id="module-output" name="cut3d 3d indexing format to csv" />
     </root>
   </artifact>

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    static final String PROGRAM_NAME = "java indexed3DToCSV";
+    static final String PROGRAM_NAME = "java -jar spacedToCSV";
     private static boolean isVerbose = false; //if true, can print verbose messages to stderr
 
     public static void main(String[] args) {
