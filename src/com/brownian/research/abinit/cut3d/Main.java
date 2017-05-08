@@ -11,11 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        if(args.length == 0 || isHelpFlag(args[0])){
-            printHelpMessageTo(System.err);
-            return;
-        }
-
         String inputFilePath = null, outputFilePath = null;
 
         //parse command-line arguments
@@ -40,8 +35,11 @@ public class Main {
                     i++; //increment the counter to skip over -in and the filename
                     outputFilePath = args[i];
                 }
-            } else if(isVerboseFlag(args[i])){
+            } else if(isVerboseFlag(args[i])) {
                 isVerbose = true;
+            } else if(isHelpFlag(args[i])){
+                printHelpMessageTo(System.err);
+                return;
             } else if(inputFilePath == null){
                 inputFilePath = args[i];
             } else if(outputFilePath == null){
