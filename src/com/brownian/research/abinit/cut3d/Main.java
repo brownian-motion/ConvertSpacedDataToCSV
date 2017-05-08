@@ -75,7 +75,7 @@ public class Main {
     }
 
 
-    private static void executeConversion(InputStreamReader inputStreamReader, OutputStreamWriter outputStreamWriter) throws IllegalFormatException{
+    public static void executeConversion(InputStreamReader inputStreamReader, OutputStreamWriter outputStreamWriter) throws IllegalFormatException{
         Scanner convenientLineReader = new Scanner(inputStreamReader);
         PrintWriter convenientLineWriter = new PrintWriter(new BufferedWriter(outputStreamWriter));
 
@@ -114,7 +114,7 @@ public class Main {
      */
     private static InputStreamReader getInputStreamReaderFrom(String inputFilePath) throws FileNotFoundException{
         if(inputFilePath == null){
-            verbosePrintln("No input file specified; outputting to stdin");
+            verbosePrintln("No input file specified; inputting from stdin");
             return new InputStreamReader(System.in);
         }
         File inputFile = new File(inputFilePath);
@@ -156,7 +156,7 @@ public class Main {
         stream.println("\t"+PROGRAM_NAME+" [-h|--help|/?|/h]\n\t\tDisplay this help message");
     }
 
-    static void printUserErrorMessage(String message){
+    private static void printUserErrorMessage(String message){
         System.err.println(message);
         printUsageInformationTo(System.err);
     }

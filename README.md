@@ -1,12 +1,12 @@
 # ConvertSpacedDataToCSV
 This is a custom tool I created to help me in my research.
 
-It converts the 3D-indexed output of [Abinit](http://www.abinit.org/)'s [Cut3D](http://www.abinit.org/doc/helpfiles/for-v8.2/users/cut3d_help.html) utility to CSV format.
+It converts the 3D-indexed expectedOutput of [Abinit](http://www.abinit.org/)'s [Cut3D](http://www.abinit.org/doc/helpfiles/for-v8.2/users/cut3d_help.html) utility to CSV format.
 More generally, it takes lines with data separated by consecutive spaces, and outputs lines with data separated by single commas.
 
 # Features
 
-* Converts space-delimited input to comma-delimited output, ignoring spaces at the start/end of a line.
+* Converts space-delimited input to comma-delimited expectedOutput, ignoring spaces at the start/end of a line.
 * Accepts input through stdin or from a specified file
 * Output through stdout or to a specified file
 * Only recognizes the space character, not tabs or other whitespace.
@@ -16,28 +16,28 @@ More generally, it takes lines with data separated by consecutive spaces, and ou
 These examples assume that the program is compiled into `spacedToCSV.jar`.
 
     java -jar spacedToCSV.jar (-h|--help|/?|/h)                                           Prints a help message
-    java -jar spacedToCSV.jar [-v|--verbose] [[-in] <input file>] [[-out] <output file>]  Reads from stdin or <input file> and writes to stdout or <output file>
+    java -jar spacedToCSV.jar [-v|--verbose] [[-in] <input file>] [[-out] <expectedOutput file>]  Reads from stdin or <input file> and writes to stdout or <expectedOutput file>
 
 ## Flags
 
 * `-in` Specifies an input file to read from.
-* `-out` Specifies an output file to write to.
+* `-out` Specifies an expectedOutput file to write to.
 * `-v` `--verbose` Turns on detailed logging to stderr
 * `-h` `--help` `/?` `/h` Displays a help message.
 
 ## Example usage
 
-Read from `sample_DEX_file` and write to `output.csv`:
+Read from `sample_DEX_file` and write to `expectedOutput.csv`:
 
-    java -jar spacedToCSV.jar sample_DEX_file output.csv
+    java -jar spacedToCSV.jar sample_DEX_file expectedOutput.csv
     
 Read from stdin and write to stdout:
 
     cat sample_DEX_file | java -jar spacedToCSV.jar
     
-Read from `sample_DEX_file` and write to `output.csv`:
+Read from `sample_DEX_file` and write to `expectedOutput.csv`:
 
-    java -jar spacedToCSV.jar -out output.csv -in sample_DEX_file
+    java -jar spacedToCSV.jar -out expectedOutput.csv -in sample_DEX_file
     
 Gather more details about errors:
 
@@ -53,7 +53,7 @@ The only file is [Main.java](src/com/brownian/research/abinit/cut3d/Main.java), 
 
 ## Using IntelliJ
 
-Add an artifact to your project structure that will compile the output of building into a .jar of your choosing.
+Add an artifact to your project structure that will compile the expectedOutput of building into a .jar of your choosing.
 
 ## Command Line
 
