@@ -136,7 +136,7 @@ public class Main {
     }
 
     private static boolean isHelpFlag(String flag){
-        return flag.equals("-h") || flag.equals("--help") || flag.equals("/?");
+        return flag.equals("-h") || flag.equals("--help") || flag.equals("/?") || flag.equals("/h");
     }
 
     private static boolean isVerboseFlag(String flag){
@@ -153,7 +153,7 @@ public class Main {
     private static void printUsageInformationTo(PrintStream stream){
         stream.println("Usage:");
         stream.println("\t"+PROGRAM_NAME+" [-v|--verbose] [-in] <input file>] [[-out] <output file>]\n\t\tConvert a file and output the result to stdout or the specified file");
-        stream.println("\t"+PROGRAM_NAME+" [-h]\n\t\tDisplay this help message");
+        stream.println("\t"+PROGRAM_NAME+" [-h|--help|/?|/h]\n\t\tDisplay this help message");
     }
 
     static void printUserErrorMessage(String message){
